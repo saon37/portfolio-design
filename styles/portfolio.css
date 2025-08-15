@@ -81,6 +81,70 @@ body{
     background: #d35400;
     cursor: pointer;
 }
+ /* Hero Area Styles  */
+ 
+ .hero-area{
+    display: flex;
+    /* background: #d6dfeb; */
+    height: 80vh;
+    background-image: url(/images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+ .hero-text{
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 40px;
+    padding-top: 120px;
+    color:#fff;
+
+    animation: slide 2s ease-in-out forwards;
+ }
+ .hero-h2{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-left: 5px solid #eb3b5a;
+    padding-left: 20px;
+ }
+ .hero-h4{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+ }
+ .hero-span{
+    color:#eb3b5a;
+ }
+ .hero-span1,
+ .hero-span2,
+ .hero-span3,
+ .hero-span4,
+ .hero-span5{
+    color:#20bf6b;
+ }
+ .hero-image{
+    animation: slideRight 2s ease-in-out forwards;
+ }
+ .hero-image img{
+    width:100%;
+    border: none;
+    border-radius: 50%;
+    height: 70vh;
+    margin: 20px -10px;
+    
+ }
+ .btn-secondary{
+    background: #eb3b5a;
+    color: #fff;
+    padding: 12px 35px;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 9px;
+ }
+/* animation uses  */
 @keyframes showdown {
     from{
         transform: translateY(-80px);
@@ -91,9 +155,78 @@ body{
         
     }
 }
+@keyframes slide {
+    from{
+        transform: translateX(-150px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes slideRight {
+    from{
+        transform: translateX(150px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
 /* responsive for mobile  */
 @media screen and (max-width:576px){
+    .header{
+        flex-direction: column;
+    }
     .navbar ul{
         display: none;
+        margin-right: 0;
+    }
+    .logo{
+        padding-left: 5px;
+    }
+    .logo h2{
+        font-size: 1.5rem;
+    }
+    .header{
+        height: 80px;
+    }
+    .btn-primary{
+        display: none;
+        font-size: 1rem;
+        padding:8px 12px;
+        margin-right: 20px;
+    }
+    .hero-area{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .hero-text {
+        order:2;
+        padding:10px;
+        text-align: center;
+        animation: none;
+    }
+    .hero-image{
+         animation: none;
+    }
+    .hero-image img{
+        /* margin: 10px 130px;
+        width: 40%; 
+        height: auto;      */
+        margin: 10px auto;
+        width: 50%;
+        height: auto;
+        display: block;
+    }
+    .hero-h2{
+        font-size:1.8rem;
+        margin-bottom: 15px;
+       
+    }
+    .hero-h4{
+        font-size:1.2rem;
+    }
+    .btn-secondary{
+        font-size: 1rem;
+        padding: 8px 10px;
     }
 }
